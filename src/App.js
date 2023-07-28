@@ -4,13 +4,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import React from 'react';
 
-import HomePage from './HomePage';
-import Header from './Header';
+import HomePage from './page/HomePage';
+import Header from './component/Header';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import AllCocktails from './AllCocktails';
-import RandomCocktail from './RandomCocktail';
-import RandomCocktails from './RandomCocktails';
-import SearchResultsPage from './SearchResultsPage';
+import AllCocktails from './page/AllCocktails';
+import RandomCocktail from './page/RandomCocktail';
+import RandomCocktails from './page/RandomCocktails';
+import SearchResultsPage from './page/SearchResultsPage';
 
 function App() {
   return (

@@ -1,35 +1,5 @@
-// import { useEffect, useState } from "react";
 
-// const AllCocktails = () => {
-//     const [cocktails, setCocktails] = useState([]);
 
-//     const fetchCocktails = async () => {
-//         const cocktailsResponse = await fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=");
-//         const cocktailsJs = await cocktailsResponse.json();
-
-//         setCocktails(cocktailsJs.drinks);
-//     };
-
-//     useEffect(() => {
-//         fetchCocktails();
-//     }, []);
-
-//     return (
-//         <div>
-//             <h1>List of Cocktails</h1>
-
-//             {cocktails.length === 0 && <p>Loading...</p>}
-
-//             {cocktails.map((cocktail) => (
-//                 <div key={cocktail.idDrink}>
-//                     <p>{cocktail.strDrink}</p>
-//                 </div>
-//             ))}
-//         </div>
-//     );
-// };
-
-// export default AllCocktails;
 
 ////
 
@@ -56,13 +26,17 @@ const AllCocktails = () => {
     }, []);
 
     return (
-        <div>
-            <h1>Liste des cocktails</h1>
-            <div>
+        <div className="container mt-4">
+            <h1 className="text-center">Liste des cocktails</h1>
+            <div className="row">
                 {cocktails.map((cocktail) => (
-                    <div key={cocktail.idDrink}>
-                        <h2>{cocktail.strDrink}</h2>
-                        <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} style={{ width: '150px' }} />
+                    <div key={cocktail.idDrink} className="col-md-4 mb-4">
+                        <div className="card">
+                            <img src={cocktail.strDrinkThumb} className="card-img-top" alt={cocktail.strDrink} />
+                            <div className="card-body">
+                                <h5 className="card-title">{cocktail.strDrink}</h5>
+                            </div>
+                        </div>
                     </div>
                 ))}
             </div>
@@ -71,3 +45,4 @@ const AllCocktails = () => {
 };
 
 export default AllCocktails;
+

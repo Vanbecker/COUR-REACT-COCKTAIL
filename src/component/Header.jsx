@@ -1,5 +1,6 @@
+
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Header = () => {
     // Chemin d'accès à l'image de votre logo
@@ -7,6 +8,9 @@ const Header = () => {
 
     // État pour stocker la valeur de la recherche
     const [searchQuery, setSearchQuery] = useState('');
+
+    // Hook navigate pour la redirection
+    const navigate = useNavigate();
 
     // Fonction pour mettre à jour la valeur de la recherche
     const handleSearchChange = (e) => {
@@ -20,6 +24,8 @@ const Header = () => {
         console.log("Recherche soumise :", searchQuery);
         // Réinitialiser la valeur de la recherche après la soumission du formulaire
         setSearchQuery('');
+        // Redirection vers la page des résultats de recherche avec la valeur de l'input dans l'URL
+        navigate(`/search-results?search=${searchQuery}`);
     };
 
     return (
@@ -64,5 +70,6 @@ const Header = () => {
 };
 
 export default Header;
+
 
 

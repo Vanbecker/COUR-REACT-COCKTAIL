@@ -12,7 +12,9 @@ import AllCocktails from './page/AllCocktails';
 import RandomCocktail from './page/RandomCocktail';
 import RandomCocktails from './page/RandomCocktails';
 import SearchResultsPage from './page/SearchResultsPage';
-import ShowCocktailPage from './page/ShowCocktailPage'
+import ShowCocktailPage from './page/ShowCocktailPage';
+import ListCocktailsByCategoryPage from './page/ListCocktailsByCategoryPage';
+
 
 
 function App() {
@@ -27,6 +29,7 @@ function App() {
         <Route path="/Random-cocktails" element={<RandomCocktails />} />
         <Route path="/search-results" element={<SearchResultsPage />} />
         <Route path="/cocktails/show/:id" element={<ShowCocktailPage />} />
+        <Route path="/cocktails/:categoryName" element={<ListCocktailsByCategoryPage />} />
 
       </Routes>
 

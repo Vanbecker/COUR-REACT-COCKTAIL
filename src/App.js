@@ -10,6 +10,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AllCocktails from './AllCocktails';
 import RandomCocktail from './RandomCocktail';
 import RandomCocktails from './RandomCocktails';
+import SearchResultsPage from './SearchResultsPage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/AllCocktails" element={<AllCocktails />} />
         <Route path="/Random-cocktail" element={<RandomCocktail />} />
         <Route path="/Random-cocktails" element={<RandomCocktails />} />
+        <Route path="/SearchResultsPage" element={<SearchResultsPage />} />
       </Routes>
     </BrowserRouter>
   );

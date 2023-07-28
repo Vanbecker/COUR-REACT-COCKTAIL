@@ -1,8 +1,3 @@
-
-
-
-////
-
 import React, { useState, useEffect } from 'react';
 
 const AllCocktails = () => {
@@ -45,4 +40,8 @@ const AllCocktails = () => {
 };
 
 export default AllCocktails;
+
+
+
+
 
